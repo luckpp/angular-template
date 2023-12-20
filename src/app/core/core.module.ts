@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { RouterModule } from '@angular/router';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { SideBarChildComponent } from './components/side-bar-child/side-bar-child.component';
 
 
 @NgModule({
   declarations: [
     NavigationBarComponent,
-    SideBarComponent
+    SideBarComponent,
+    SideBarChildComponent
   ],
   imports: [
     CommonModule,

@@ -24,6 +24,7 @@
     "bootstrap-icons": "^1.11.2",
     "ngx-auto-unsubscribe": "^3.0.1",
     "rxjs": "^6.6.7",
+    "subsink": "^1.0.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
