@@ -3,5 +3,5 @@ import { Payload } from "./payload.model";
 
 export class Envelope {
   type: PayloadType = PayloadType.NA;
-  payload: Payload | undefined;
+  payload!: Payload;
 }

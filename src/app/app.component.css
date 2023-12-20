@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.nav-bar {
+  padding: 10px;
+  background-color: darkcyan;
+}
+
+.presentation-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.side-bar {
+  padding: 10px;
+  background-color: darkgoldenrod;
+}
+
+.presentation {
+  flex: 1;
+  padding: 10px;
+}

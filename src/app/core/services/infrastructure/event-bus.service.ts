@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
-import { Envelope, Payload, PayloadType } from '../model';
+import { Envelope, Payload, PayloadType } from 'src/app/shared/model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class EventBusService {
     this.subject$ = new Subject();
   }
 
-  on(type: PayloadType, action: (payload: Payload | undefined) => {}): Subscription {
+  on(type: PayloadType, action: (payload: Payload) => void): Subscription {
     return this.subject$
       .pipe(
         filter((envelope: Envelope) => { 
@@ -24,7 +24,7 @@ export class EventBusService {
           return envelope.payload;
         })
       ).subscribe({
-        next: (payload: Payload | undefined) => action(payload)
+        next: (payload: Payload) => action(payload)
       });
   }
 

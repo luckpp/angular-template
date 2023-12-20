@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ChildrenOutletContexts, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     CoreModule,
     RouterModule,
+    NgbModule,
   ],
   providers: [
     ChildrenOutletContexts,
