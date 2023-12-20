@@ -11,8 +11,7 @@ import { Payload, PayloadType } from 'src/app/shared/model';
 export class NavigationBarComponent implements OnInit, OnDestroy {
 
   message!: string;
-
-  private subscription!: Subscription;
+  private subscription$!: Subscription;
 
   constructor(
     private eventBusService: EventBusService
@@ -20,7 +19,7 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subscription = this.eventBusService.on(
+    this.subscription$ = this.eventBusService.on(
       PayloadType.GenericMessage,
       (payload: Payload) => {
         this.message = payload.message;
@@ -28,8 +27,8 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
   }
   
   ngOnDestroy(): void {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
+    if (this.subscription$) {
+      this.subscription$.unsubscribe();
     }
   }
 }

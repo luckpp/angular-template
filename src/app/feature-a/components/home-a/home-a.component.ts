@@ -19,8 +19,20 @@ export class HomeAComponent implements OnInit {
 
   sendNotification() {
 
+    
+  }
+
+  clear(): void {
+    this.sendMessage('');
+  }
+
+  sayHello(): void {
+    this.sendMessage('Hello from Home A');
+  }
+
+  private sendMessage(message: string): void {
     const payload = new Payload();
-    payload.message = 'Hello from Home A';
+    payload.message = message;
 
     const envelope = new Envelope();
     envelope.type = PayloadType.GenericMessage;
